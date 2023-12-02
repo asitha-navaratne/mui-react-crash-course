@@ -2,13 +2,8 @@ import { Box } from "@mui/material";
 
 const Rightbar = () => {
   return (
-    <Box
-      bgcolor={"lightcoral"}
-      sx={{ display: { xs: "none", sm: "block" } }}
-      flex={2}
-      p={2}
-    >
-      Rightbar
+    <Box sx={{ display: { xs: "none", sm: "block" } }} flex={2} p={2}>
+      <Box position={"fixed"}>Rightbar</Box>
     </Box>
   );
 };
