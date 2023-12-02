@@ -17,8 +17,11 @@ import {
   Settings,
   Storefront,
 } from "@mui/icons-material";
+import PropTypes from "prop-types";
 
-const Sidebar = () => {
+const Sidebar = (props) => {
+  const { mode, setMode } = props;
+
   return (
     <Box sx={{ display: { xs: "none", sm: "block" } }} flex={1} p={2}>
       <Box position={"fixed"}>
@@ -84,13 +87,20 @@ const Sidebar = () => {
               <ListItemIcon>
                 <ModeNight />
               </ListItemIcon>
-              <Switch />
+              <Switch
+                onChange={() => setMode(mode === "light" ? "dark" : "light")}
+              />
             </ListItemButton>
           </ListItem>
         </List>
       </Box>
     </Box>
   );
+};
+
+Sidebar.propTypes = {
+  mode: PropTypes.string,
+  setMode: PropTypes.func,
 };
 
 export default Sidebar;
