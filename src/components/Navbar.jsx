@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 import {
   AppBar,
   Avatar,
@@ -11,7 +13,6 @@ import {
   styled,
 } from "@mui/material";
 import { Mail, Notifications, Pets } from "@mui/icons-material";
-import { useState } from "react";
 
 const StyledToolbar = styled(Toolbar)({
   display: "flex",
